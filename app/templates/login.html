@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}登入{% endblock %}
+{% block content %}
+<h2>登入</h2>
+<form method="POST">
+    使用者名稱：<input type="text" name="username" required><br>
+    密碼：<input type="password" name="password" required><br>
+    <button type="submit">登入</button>
+</form>
+<p>尚未註冊？<a href="{{ url_for('auth.register') }}">前往註冊</a></p>
+{% endblock %}

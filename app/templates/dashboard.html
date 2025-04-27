@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}任務清單{% endblock %}
+{% block content %}
+<h2>我的待辦清單</h2>
+
+<form method="POST" action="{{ url_for('todo.add_todo') }}">
+    標題：<input type="text" name="title" required>
+    描述：<input type="text" name="description">
+    <button type="submit">新增任務</button>
+</form>
+
+<ul>
+    {% for task in task_list %}
+    <li>
+        {% if task.completed %}
+        <s>{{ task.title }}</s>
+        {% else %}
+        {{ task.title }}
+        {% endif %}
+        - {{ task.description }}
+        <form method="POST" action="{{ url_for('todo.toggle_complete', task_id=task.id) }}" style="display:inline">
+            <button type="submit">切換狀態</button>
+        </form>
+        <form method="POST" action="{{ url_for('todo.delete_todo', task_id=task.id) }}" style="display:inline">
+            <button type="submit">刪除</button>
+        </form>
+        <a href="{{ url_for('todo.edit_todo', task_id=task.id) }}">編輯</a>
+    </li>
+    {% else %}
+    <li>目前沒有任務</li>
+    {% endfor %}
+</ul>
+{% endblock %}

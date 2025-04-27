@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}編輯任務{% endblock %}
+{% block content %}
+<h2>編輯任務</h2>
+<form method="POST">
+    標題：<input type="text" name="title" value="{{ task.title }}" required><br>
+    描述：<input type="text" name="description" value="{{ task.description }}"><br>
+    <button type="submit">更新任務</button>
+</form>
+<a href="{{ url_for('todo.dashboard') }}">返回清單</a>
+{% endblock %}
