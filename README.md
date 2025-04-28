@@ -1,10 +1,13 @@
 📋 Todo List 會員任務管理系統
+
 ✨ 一個基於 Flask 開發的待辦事項管理網站，具備會員註冊、登入、登出功能，並可進行待辦清單的新增、修改、完成/未完成切換及刪除。
 
 🚀 專案簡介
+
 本專案主要目的是練習使用 Flask 架構開發小型完整應用，學習後端與資料庫整合、會員驗證保護、網站前後端基本互動，以及環境變數的安全管理。
 
 🛠️ 核心功能
+
 1.  會員系統
 
   ●  使用者註冊 / 登入 / 登出
@@ -34,6 +37,7 @@
   ●  自訂裝飾器保護路由（登入驗證）
 
 🗂️ 專案結構
+
 Todo_list/
 run.py                  # 啟動 Flask 應用
 init_db.py               # 初始化資料庫
@@ -62,6 +66,7 @@ dashboard.html   # 待辦事項頁面
 edit.html        # 編輯待辦事項頁
 
 ⚙️ 安裝與執行
+
 1. 複製專案
   git clone https://github.com/PoJungHsiao/Todo_list.git
   cd Todo_list
@@ -88,6 +93,7 @@ edit.html        # 編輯待辦事項頁
    python run.py
 
 🧠 學到的技術
+
 ●  Flask 框架基本使用
 
 ●  Blueprint 模組化開發
@@ -103,10 +109,13 @@ edit.html        # 編輯待辦事項頁
 ●  網頁版面基礎設計（HTML + CSS）
 
 📜 授權
+
 本專案遵循 MIT License。
 
 🧑‍💻 作者
+
 GitHub: PoJungHsiao(https://github.com/PoJungHsiao)
+
 Email: happy10246308@gmail.com
 
 
