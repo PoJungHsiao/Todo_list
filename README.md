@@ -1,6 +1,6 @@
 📋 Todo List 會員任務管理系統
 
-✨ 一個基於 Flask 開發的待辦事項管理網站，具備會員註冊、登入、登出功能，並可進行待辦清單的新增、修改、完成/未完成切換及刪除。
+✨ 一個基於 Flask 開發的待辦事項管理網站，具備會員註冊、登入、登出功能，並可進行待辦清單的新增、修改、刪除及任務狀態的切換(完成/未完成)。
 
 🚀 專案簡介
 
@@ -8,15 +8,16 @@
 
 🛠️ 核心功能
 
-●  會員系統
+◆  會員系統
 
   ●  使用者註冊 / 登入 / 登出
 
   ●  密碼加密（bcrypt）
 
   ●  Session 維持登入狀態
+  
 
-●  任務管理
+◆  任務管理
 
   ●  新增待辦事項
 
@@ -25,8 +26,9 @@
   ●  切換完成 / 未完成狀態
 
   ●  刪除待辦事項
+  
 
-●  系統設計
+◆  系統設計
 
   ●  Blueprint 模組化架構
 
@@ -35,6 +37,7 @@
   ●  MySQL 資料庫連接與操作
 
   ●  自訂裝飾器保護路由（登入驗證）
+  
 
 🗂️ 專案結構
 
@@ -90,45 +93,46 @@ dashboard.html   # 待辦事項頁面
 
 edit.html        # 編輯待辦事項頁
 
+
 ⚙️ 安裝與執行
 
 1. 複製專案
    
-  git clone https://github.com/PoJungHsiao/Todo_list.git
-  
-  cd Todo_list
-
-3. 建立虛擬環境並安裝套件
+   git clone https://github.com/PoJungHsiao/Todo_list.git
    
-  python -m venv venv
-  
-  venv\Scripts\activate   # Windows
-  
-  source venv/bin/activate # macOS / Linux
+   cd Todo_list
 
-  pip install -r requirements.txt
+2. 建立虛擬環境並安裝套件
+   
+    python -m venv venv
+  
+    venv\Scripts\activate   # Windows
+  
+    source venv/bin/activate # macOS / Linux
+
+    pip install -r requirements.txt
 
 3. 建立 .env 檔案
    
-  SECRET_KEY=你的隨機字串
+    SECRET_KEY=你的隨機字串
   
-  DB_HOST=localhost
+    DB_HOST=localhost
   
-  DB_PORT=3306
+    DB_PORT=3306
   
-  DB_USER=你的DB使用者
+    DB_USER=你的DB使用者
   
-  DB_PASSWORD=你的DB密碼
+    DB_PASSWORD=你的DB密碼
   
-  DB_NAME=todo_app
+    DB_NAME=todo_app
 
-5. 初始化資料庫
+4. 初始化資料庫
    
-   python init_db.py
+     python init_db.py
 
-7. 啟動應用
+5. 啟動應用
    
-   python run.py
+     python run.py
 
 🧠 學到的技術
 
