@@ -5,7 +5,7 @@
 本專案主要目的是練習使用 Flask 架構開發小型完整應用，學習後端與資料庫整合、會員驗證保護、網站前後端基本互動，以及環境變數的安全管理。
 
 🛠️ 核心功能
-●  會員系統
+1.  會員系統
 
   ●  使用者註冊 / 登入 / 登出
 
@@ -13,7 +13,7 @@
 
   ●  Session 維持登入狀態
 
-●  任務管理
+2.  任務管理
 
   ●  新增待辦事項
 
@@ -23,7 +23,7 @@
 
   ●  刪除待辦事項
 
-●  系統設計
+3.  系統設計
 
   ●  Blueprint 模組化架構
 
@@ -35,38 +35,31 @@
 
 🗂️ 專案結構
 Todo_list/
-│
-├── run.py                  # 啟動 Flask 應用
-├── init_db.py               # 初始化資料庫
-├── config.py                # Flask設定及DB設定
-├── .env                     # 環境變數（敏感資料）
-├── requirements.txt         # 套件需求
-│
-├── app/
-│   ├── __init__.py          # 建立 Flask App，註冊 Blueprint
-│   │
-│   ├── routes/
-│   │   ├── __init__.py      
-│   │   ├── auth.py          # 會員註冊與登入功能
-│   │   ├── todo.py          # 待辦清單功能
-│   │   └── main.py          # 首頁邏輯
-│   │
-│   ├── utils/
-│   │   ├── __init__.py      
-│   │   └── decorators.py    # 登入驗證裝飾器
-│   │
-│   ├── static/
-│   │   └── style.css        # 網頁樣式
-│   │
-│   └── templates/
-│       ├── base.html        # 共用基礎模板
-│       ├── register.html    # 註冊頁面
-│       ├── login.html       # 登入頁面
-│       ├── dashboard.html   # 待辦事項頁面
-│       └── edit.html        # 編輯待辦事項頁
-│
-└── LICENSE                  # 授權說明
-└── README.md                # 專案介紹文件
+run.py                  # 啟動 Flask 應用
+init_db.py               # 初始化資料庫
+config.py                # Flask設定及DB設定
+.env                     # 環境變數（敏感資料）
+requirements.txt         # 套件需求
+LICENSE                  # 授權說明
+README.md                # 專案介紹文件
+app/
+__init__.py          # 建立 Flask App，註冊 Blueprint
+..routes/
+__init__.py      
+auth.py          # 會員註冊與登入功能
+todo.py          # 待辦清單功能
+main.py          # 首頁邏輯
+..utils/
+__init__.py      
+ decorators.py    # 登入驗證裝飾器
+..static/
+style.css        # 網頁樣式
+..templates/
+base.html        # 共用基礎模板
+register.html    # 註冊頁面
+login.html       # 登入頁面
+dashboard.html   # 待辦事項頁面
+edit.html        # 編輯待辦事項頁
 
 ⚙️ 安裝與執行
 1. 複製專案
